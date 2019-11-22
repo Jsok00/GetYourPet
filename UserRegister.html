@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		
+		<title>注册</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<meta name="keywords" content="Gato Responsive web template, Bootstrap Web Templates, Flat Web Templates, Andriod Compatible web template, 
+		Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyErricsson, Motorola web design" />
+		
+		 <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+		 <link href="css/bootstrap.css" rel="stylesheet" type="text/css" />
+		 <link href="css/style.css" rel="stylesheet" type="text/css"/>	
+		 <link href="http://fonts.useso.com/css?family=Raleway:400,100,200,300,500,600,700|Cinzel+Decorative:400,700" rel="stylesheet" type="text/css">
+		 <script src="js/jquery.min.js"> </script>
+		 
+		<!--//webfonts-->
+	</head>
+	<body>
+		
+		
+		<div id="home" class="header">
+			<div class="header-bottom">
+				<div class="container">
+					<div class="logo">
+						<a href="index.html"><h1>Gat<span>o</span></h1></a>
+					</div>
+					<span class="menu"></span>
+					<div class="top-menu">
+						<ul>
+						<nav>
+							<li><a href="index.php">主页</a></li>
+							<li><a class="active" href="UserRegister.html">注册</a></li>
+							<li><a href="UserLogin.html">登录</a></li>
+							<li><a href="show.html">直播</a></li>
+							<li><a href="check.html">日常打卡</a></li> 
+							<li><a href="PetList.php">猫咪总览</a></li> 
+							<li><a href="#blog" class="scroll">猫咪推荐</a></li>
+							<li><a href="login.html">申请/领养查询</a></li>
+							
+						</nav>
+						</ul>
+					</div>
+					
+					
+					
+					<!-- script for menu -->
+					<script>
+					$( "span.menu" ).click(function() {
+					  $( ".top-menu" ).slideToggle( "slow", function() {
+					    // Animation complete.
+					  });
+					});
+				</script>
+				<!-- script for menu -->
+					<div class="clearfix"></div>
+				</div>
+			</div>
+			<div class="banner two">
+				<div class="container">	
+				<div class="pag-nav">
+						<ul class="p-list">
+							<li><a href="index.html">首页</a></li> &nbsp;&nbsp;/&nbsp;
+							<li class="act">&nbsp;注册</li>
+						</ul>
+					</div>
+			
+				</div>   
+			</div>
+			
+			
+			
+			
+			</div>
+		
+		
+		
+		
+		
+		<div class="container">
+		<div class="single">
+		<div class="leave" align="center">
+			<h1 align="center">注册</h3>
+				<form action="UserRegister.php" method="post">
+					<div class="single-grid">
+						<div class="single-us">
+							<input type="text" name="uname" placeholder="姓名">
+							<input type="text" name="uphone" placeholder="电话">
+							<input type="text" name="upassword" placeholder="密码">
+							<input type="text" name="uage" placeholder="年龄">
+							<input type="text" name="uaddress" placeholder="现住址">
+							<input type="text" name="ucardid" placeholder="身份证号码"><br>
+							性别：
+							<input type="radio" name="usex" value="male">男
+                            <input type="radio" name="usex" value="female">女<br><br>
+							职业：
+							<select name="ujob">
+							  <option value ="student">学生</option>
+							  <option value ="working">在职</option>
+							  <option value="noworking">待业</option>
+							</select>
+							住房情况：
+							<select name="uroom">
+							  <option value ="own">独居</option>
+							  <option value ="rent">租房</option>
+							  <option value="commodation">合租</option>
+							</select>
+							<br>
+							<input type="submit" value="注册" align="center">
+						</div>
+					</div>	
+				</form>
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus mattis semper nisl, vitae malesuada massa egestas a. Vestibulum vestibulum urna sapien, eu bibendum magna ornare non.</p>
+		</div>
+		</div>
+		</div>
+	</body>
+</html>

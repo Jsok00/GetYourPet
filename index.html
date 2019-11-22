@@ -1,0 +1,374 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>主页</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="Gato Responsive web template, Bootstrap Web Templates, Flat Web Templates, Andriod Compatible web template, 
+Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyErricsson, Motorola web design" />
+<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+<link href="css/bootstrap.css" rel='stylesheet' type='text/css' />
+<!-- Custom Theme files -->
+<link href="css/style.css" rel='stylesheet' type='text/css' />	
+<script src="js/jquery.min.js"> </script>
+<!--webfonts-->
+ <link href='http://fonts.useso.com/css?family=Raleway:400,100,200,300,500,600,700|Cinzel+Decorative:400,700' rel='stylesheet' type='text/css'>
+<!--//webfonts-->
+</head>
+<body>
+	<!--start-home-->
+	<div id="home" class="header">
+		<div class="header-bottom">
+			<div class="container">
+				<div class="logo">
+					<a href="index.html"><h1>带我<span>走吧</span></h1></a>
+				</div>
+				<span class="menu"></span>
+				<div class="top-menu">
+					<ul>
+					<nav>
+						<li><a class="active" href="index.php">主页</a></li>
+						<?php 
+						session_start();
+						if(array_key_exists("person",$_SESSION)==FALSE || $_SESSION['person']!='user'){
+						
+						?>
+						<li><a  href="UserRegister.html">注册</a></li>
+						<li><a  href="UserLogin.html">登录</a></li>
+						<?php }?>
+						<li><a href="show.html">直播</a></li>
+						<li><a href="check.html">日常打卡</a></li> 
+						<li><a href="PetList.php">猫咪总览</a></li> 
+					    <li><a href="#blog" class="scroll">猫咪推荐</a></li>
+						<li><a href="login.html">申请/领养查询</a></li>
+						<?php
+						if(array_key_exists("person",$_SESSION)!=FALSE && $_SESSION['person']=='user'){
+						
+						?>
+						<li><a href="/pets1/person/index.php">个人资料</a></li>
+						<li><a href="UserOut.php">退出登录</a></li>
+						
+						<?php }?>
+					</nav>
+					</ul>
+				</div>
+				<!-- script for menu -->
+				<script>
+				$( "span.menu" ).click(function() {
+				  $( ".top-menu" ).slideToggle( "slow", function() {
+				    // Animation complete.
+				  });
+				});
+			</script>
+			<!-- script for menu -->
+				<div class="clearfix"></div>
+			</div>
+		</div>
+
+	<div class="banner">
+		<div class="container">	
+		<ul id="flexiselDemo3">
+				<li>
+					<div class="biseller-column">
+					<a class="lightbox" href="#goofy">
+								   <img src="images/s1.jpg"/>
+								</a> 
+								<div class="lightbox-target" id="goofy">
+									  <img src="images/s1.jpg"/>
+								   <a class="lightbox-close" href="#"> </a>
+
+									<div class="clearfix"> </div>
+								</div>
+					</div>
+				</li>
+				<li>
+					<div class="biseller-column">
+					<a class="lightbox" href="#goofy">
+								  <img src="images/s4.jpg"/>
+								</a> 
+								<div class="lightbox-target" id="goofy">
+									  <img src="images/s4.jpg"/>
+								   <a class="lightbox-close" href="#"> </a>
+
+									<div class="clearfix"> </div>
+								</div>
+					</div>
+				</li>
+				<li>
+					<div class="biseller-column">
+					<a class="lightbox" href="#goofy">
+								  <img src="images/s3.jpg"/>
+								</a> 
+								<div class="lightbox-target" id="goofy">
+									  <img src="images/s3.jpg"/>
+								   <a class="lightbox-close" href="#"> </a>
+
+									<div class="clearfix"> </div>
+								</div>
+					</div>
+				</li>
+				<li>
+					<div class="biseller-column">
+					<a class="lightbox" href="#goofy">
+								    <img src="images/s1.jpg"/>
+								</a> 
+								<div class="lightbox-target" id="goofy">
+									<img src="images/s1.jpg"/>
+								   <a class="lightbox-close" href="#"> </a>
+
+									<div class="clearfix"> </div>
+								</div>
+					</div>
+				</li>
+				<li>
+					<div class="biseller-column">
+					<a class="lightbox" href="#goofy">
+								  <img src="images/s4.jpg"/>
+								</a> 
+								<div class="lightbox-target" id="goofy">
+									  <img src="images/s4.jpg"/>
+								   <a class="lightbox-close" href="#"> </a>
+
+									<div class="clearfix"> </div>
+								</div>
+					</div>
+				</li>
+				<li>
+					<div class="biseller-column">
+					<a class="lightbox" href="#goofy">
+								   <img src="images/s1.jpg"/>
+								</a> 
+								<div class="lightbox-target" id="goofy">
+									<img src="images/s1.jpg"/>
+								   <a class="lightbox-close" href="#"> </a>
+
+									<div class="clearfix"> </div>
+								</div>
+					</div>
+				</li>
+				<li>
+					<div class="biseller-column">
+								<a class="lightbox" href="#goofy">
+								    <img src="images/s4.jpg"/>
+								</a> 
+								<div class="lightbox-target" id="goofy">
+									<img src="images/s4.jpg"/>
+								   <a class="lightbox-close" href="#"> </a>
+									
+									<div class="clearfix"> </div>
+								</div>
+					</div>
+				</li>
+	     	</ul>
+			</div>
+			<script type="text/javascript">
+				 $(window).load(function() {
+					$("#flexiselDemo3").flexisel({
+						visibleItems:3,
+						animationSpeed: 1000,
+						autoPlay: true,
+						autoPlaySpeed: 3000,    		
+						pauseOnHover: true,
+						enableResponsiveBreakpoints: true,
+				    	responsiveBreakpoints: { 
+				    		portrait: { 
+				    			changePoint:480,
+				    			visibleItems:3
+				    		}, 
+				    		landscape: { 
+				    			changePoint:640,
+				    			visibleItems:3
+				    		},
+				    		tablet: { 
+				    			changePoint:768,
+				    			visibleItems:3
+				    		}
+				    	}
+				    });
+				    
+				});
+			   </script>
+			   <script type="text/javascript" src="js/jquery.flexisel.js"></script>
+			</div>   
+		</div>
+	<!--about-->
+	<div class="about">
+		<div class="container">
+				<div class="about-head">
+				   <h3>进入直播</h3>
+				   <p>进入我们的直播间，可以看到待领养的猫咪哦~一起来互动撸猫吧！</p>
+			  	</div>	
+				<div class="cat-info-section">
+					<div class="cat-info-left">
+						<img src="images/cat.jpg" alt="" />
+					</div>
+					<div class="cat-info-middle">
+						<h4>cat Info</h4>
+					</div>
+					<div class="cat-info-right">
+						<h3>Lorem Ipsum Simply</h3>
+						<p>Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent </p>
+					</div>
+					<div class="clearfix"></div>
+				</div>
+			</div>
+		</div>
+	<!--//about-->
+    <div class="copyrights">Collect from <a href="http://www.cssmoban.com/"  title="网站模板">网站模板</a></div>
+	<!--gallery-->
+	<div class="gallery">
+		<div class="container">
+				<div class="gallery-head">
+				   <h3>Adoption For Cats</h3>
+				   <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.Lorem Ipsum has been the industry's standard dummy text ever since, Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</p>
+			  	</div>	
+			<div class="portfolio-bottom">
+				<div class="gallery-one">
+					<div class="col-md-3 gallery-left">
+						<a href="images/g1.jpg" class=" mask b-link-stripe b-animate-go   swipebox"  title="Image Title">
+								<img src="images/g1.jpg" alt="" class="img-responsive zoom-img"/>
+						</a>
+					</div>
+					<div class="col-md-3 gallery-left">
+						<a href="images/g2.jpg" class=" mask b-link-stripe b-animate-go   swipebox"  title="Image Title">
+								<img src="images/g2.jpg" alt="" class="img-responsive zoom-img"/>
+						</a>
+					</div>
+					<div class="col-md-3 gallery-left">
+						<a href="images/g4.jpg" class=" mask b-link-stripe b-animate-go   swipebox"  title="Image Title">
+								<img src="images/g4.jpg" alt="" class="img-responsive zoom-img"/>
+						</a>
+					</div>
+					<div class="col-md-3 gallery-left">
+						<a href="images/g3.jpg" class=" mask b-link-stripe b-animate-go   swipebox"  title="Image Title">
+								<img src="images/g3.jpg" alt="" class="img-responsive zoom-img"/>
+						</a>
+					</div>
+					<div class="clearfix"> </div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!--swipebox -->	
+			<link rel="stylesheet" href="css/swipebox.css">
+				<script src="js/jquery.swipebox.min.js"></script> 
+				<script type="text/javascript">
+					jQuery(function($) {
+						$(".swipebox").swipebox();
+					});
+				</script>
+			<!--//swipebox Ends -->
+<!--/start-footer-->
+
+	<!--/adoption-->
+	<!--/blog-->
+		<div id="blog" class="blog">	
+				<div class="blog-head">
+				   <h3>猫咪推荐</h3>
+				   <p>我们随机为您推荐了三只可爱的猫咪，不如先尝试了解它们一下~如果想了解更多，可以去“猫咪总览”去看更多的待领猫咪哦~</p>
+			  	</div>			
+			<div class="blog-grids">	
+				<div class="col-md-5 blog-grid-info">
+					<img src="<?php echo $pets[0]['imgsrc'];?>" alt=""/>
+				</div>
+				<div class="col-md-3 blog-grid-info">
+					<div class="blog-grid-text">
+						<a href="PetMore.html"><h3><?php echo $pets[0]['pid'];?>号猫咪</h3></a>
+						<p><?php echo $pets[0]['starttime'];?>被我们暂时收留</p>
+						<p>现在<?php echo $pets[0]['page'];?>岁啦~</p>
+						<a class="read" href="PetMore.php?pid=<?php echo $pets[0]['pid'];?>">查看详情</a>
+					</div>
+				</div>	
+				<div class="col-md-4 blog-grid-info">
+					<img src="<?php echo $pets[1]['imgsrc'];?>" alt=""/>
+				</div>
+				<div class="clearfix"> </div>
+			</div>
+			<div class="blog-grids">	
+				<div class="col-md-5 blog-grid-info">
+					<div class="blog-grid-text blg-text-two">
+						<a href="PetMore.html"><h3><?php echo $pets[1]['pid'];?>号猫咪</h3></a>
+						<p><?php echo $pets[1]['starttime'];?>被我们暂时收留</p>
+						<p>现在<?php echo $pets[1]['page'];?>岁啦~</p>
+						<a class="read" href="PetMore.php?pid=<?php echo $pets[2]['pid'];?>">查看详情</a>
+					</div>
+				</div>
+				<div class="col-md-3 blog-grid-info">
+					<img src="<?php echo $pets[2]['imgsrc'];?>" alt=""/>
+				</div>
+				<div class="col-md-4 blog-grid-info">
+					<div class="blog-grid-text blg-text-three">
+						<a href="PetMore.html"><h3><?php echo $pets[2]['pid'];?>号猫咪</h3></a>
+						<p><?php echo $pets[2]['starttime'];?>被我们暂时收留</p>
+						<p>现在<?php echo $pets[2]['page'];?>岁啦~</p>
+						<a class="read" href="PetMore.php?pid=<?php echo $pets[2]['pid'];?>">查看详情</a>
+					</div>
+				</div>
+				<div class="clearfix"> </div>
+			</div>
+	</div>	
+</div>	
+<!----family--->
+<br><br><br><br><br><br>
+	<div class="c-family">
+		<div class="container">
+		       <div class="family-top">
+			    <h3>Cat Family !!</h3>
+				   <p>我们是一所流浪猫收留站，您可以通过我们领养喜欢的猫咪，希望您能在领养后对她悉心照顾，猫咪被我们收留后，若15天内无人领养，将被实施安乐死，希望您能献出一份爱心！谢谢！
+				   <br>如果有任何问题，请通过下方的联系方式联系我们。</p>
+				   <a class="read two" href="#">回到主页</a>
+			   </div>
+		</div>
+	</div>
+<!---- footer --->
+			<div class="footer text-center">
+				<div class="container">
+					<div class="footer-grids">
+						<div class="col-md-6 footer-text">  
+							<h3>关于我们</h3>
+							<p>本网站用于流浪猫的领养，您可以通过观看直播，或者直接在“猫咪总览”页面寻找心仪的小猫</p>
+							<p>希望您能在收养后悉心照顾，并进行打卡，方便我们对猫咪现状的了解，有任何问题请联系我们</p>
+						</div>
+						<div class="col-md-6 footer-info">
+							<h3>联系我们</h3>
+							<p>Tel：123456789</p>
+							<div class="support">
+							   <input type="text" class="text" value="Enter email..." onFocus="this.value = '';" onBlur="if (this.value == 'Enter email...') {this.value = '发送邮件';}">
+							   <input type="submit" value="发送邮件" class="botton">
+							</div>
+					</div>
+					<div class="clearfix"> </div>
+				</div>
+			</div>
+		</div>
+			<div class="copy">
+		            </div>
+			<!--start-smoth-scrolling-->
+			<script type="text/javascript">
+								jQuery(document).ready(function($) {
+									$(".scroll").click(function(event){		
+										event.preventDefault();
+										$('html,body').animate({scrollTop:$(this.hash).offset().top},1000);
+									});
+								});
+								</script>
+							<!--start-smoth-scrolling-->
+						<script type="text/javascript">
+									$(document).ready(function() {
+										/*
+										var defaults = {
+								  			containerID: 'toTop', // fading element id
+											containerHoverID: 'toTopHover', // fading element hover id
+											scrollSpeed: 1200,
+											easingType: 'linear' 
+								 		};
+										*/
+										
+										$().UItoTop({ easingType: 'easeOutQuart' });
+										
+									});
+								</script>
+		<a href="#home" id="toTop" class="scroll" style="display: block;"> <span id="toTopHover" style="opacity: 1;"> </span></a>
+
+</body>
+</html>

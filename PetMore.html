@@ -1,0 +1,215 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>详情界面</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="Gato Responsive web template, Bootstrap Web Templates, Flat Web Templates, Andriod Compatible web template, 
+Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyErricsson, Motorola web design" />
+<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+<link href="css/bootstrap.css" rel='stylesheet' type='text/css' />
+<!-- Custom Theme files -->
+<link href="css/style.css" rel='stylesheet' type='text/css' />	
+<script src="js/jquery.min.js"> </script>
+<!--webfonts-->
+ <link href='http://fonts.useso.com/css?family=Raleway:400,100,200,300,500,600,700|Cinzel+Decorative:400,700' rel='stylesheet' type='text/css'>
+<!--//webfonts-->
+</head>
+<body>
+	<!--start-home-->
+	<div id="home" class="header">
+		<div class="header-bottom">
+			<div class="container">
+				<div class="logo">
+					<a href="index.html"><h1>带我<span>走吧</span></h1></a>
+				</div>
+				<span class="menu"></span>
+				<div class="top-menu">
+					<ul>
+					<nav>
+						<li><a href="index.php">主页</a></li>
+						<li><a  href="UserRegister.html">注册</a></li>
+						<li><a  href="UserLogin.html">登录</a></li>
+						<li><a href="show.html">直播</a></li>
+						<li><a href="check.html">日常打卡</a></li> 
+						<li><a href="PetList.php">猫咪总览</a></li> 
+						<li><a class="active" href="index.html">猫咪推荐</a></li>	
+						<li><a href="login.html">申请/领养查询</a></li>
+					</nav>
+					</ul>
+				</div>
+				<!-- script for menu -->
+				<script>
+				$( "span.menu" ).click(function() {
+				  $( ".top-menu" ).slideToggle( "slow", function() {
+				    // Animation complete.
+				  });
+				});
+			</script>
+			<!-- script for menu -->
+				<div class="clearfix"></div>
+			</div>
+		</div>
+
+	<div class="banner two">
+		<div class="container">	
+		<div class="pag-nav">
+				<ul class="p-list">
+					<li><a href="index.html">Home</a></li> &nbsp;&nbsp;/&nbsp;
+					<li class="act">&nbsp; 宠物详情</li>
+				</ul>
+		  </div>
+
+		</div>   
+	</div>
+	</div>
+</div>
+<!--error-->
+<div class="event-posts">
+		<div class="container">
+			<div class="single">		
+				<div class="single-top">
+					<img  src="<?php echo $pet['imgsrc'];?>" alt=""/>
+				</div>
+				<div class="top-single">
+				<h2><?php echo $pet['pid'];?>号猫咪</h2>
+					<div class="grid-single">
+					  <div class="single-one"><span><i class="com"> </i><?php echo $pet['starttime'];?></span></div>
+						<div class="single-one"><span><i class="com"> </i>类别:<?php echo $pet['pkind'];?></span></div>
+						<div class="single-one"><span><i class="com"> </i>性别:<?php echo $pet['psex'];?></span></div>
+						<div class="single-one"><span><i class="com"> </i>毛长:<?php echo $pet['pfur'];?></span></div>
+						<div class="single-one"><span><i class="com"> </i>体型:<?php echo $pet['psize'];?></span></div>
+						<div class="single-one"><span><i class="com"> </i>年龄:<?php echo $pet['page'];?></span></div>
+						<div class="single-one"><span><i class="four"> </i>驱虫状态:<?php echo $pet['quchong'];?></span></div>
+						<div class="single-one"><span><i class="four"> </i>疫苗状态:<?php echo $pet['yimiao'];?></span></div>
+						<div class="single-one"><span><i class="four"> </i>绝育状态:<?php echo $pet['jueyu'];?></span></div>
+						<div class="clearfix"> </div>
+				  </div>
+					<p class="eget"><b><?php echo $pet['pid'];?>号小猫咪</b> 今年两岁啦！超级可爱哦，在2019年11月10日被我们发现并收养，如果在11月25号之前还没有人带她走，她会很伤心地离开大家的~</p> 
+					<p class="eget"><b>猫咪性格：</b>粘人QAQ</p> 
+			<div class="single-middle">
+				<ul class="social-share">
+					<li><span>SHARE</span></li>
+					<li><a href="#"><i> </i></a></li>						
+					<li><a href="#"><i class="tin"> </i></a></li>
+					<li><a href="#"><i class="message"> </i></a></li>				
+				</ul>
+				<a href="#"><i class="arrow"> </i></a>
+				<div class="clearfix"> </div>
+			</div>
+<div class="leave">
+				<form>
+					<div class="single-grid">
+						<div class="single-us">
+							<input type="submit" value="我要领养" >
+						</div>
+				</form>
+				</div>
+			<div class="top-comments">
+			<h3>留言区</h3>
+			<?php for($x=0;$x<count($messages1);$x++){ ?>
+			<div class="met">
+				<div class="code-in">
+					<p class="smith"><a href="#"><?php echo $messages1[$x]['uname']?></a> <span><?php echo $messages1[$x]['time']?></span></p>
+					<p class="reply"><a href="#"><i> </i>回复</a> &nbsp;<a href="#"><i> </i>举报</a></p>
+					<div class="clearfix"> </div>
+				</div>
+				<div class="comments-top-top">
+					<div class="men" >
+						<img   src="images/men.png" alt=""> 
+					</div>					
+						<p class="men-it"><?php echo $messages1[$x]['mcontent']?></p>
+					<div class="clearfix"> </div>
+				</div>
+			</div>
+			<?php 
+			if(count($messages1[$x])==6)
+			for($y=0;$y<count($messages1[$x]['reply']);$y++){ 				
+				?>
+			<div class="met met-in">
+				<div class="code-in">
+					<p class="smith"><a href="#"><?php echo $messages1[$x]['reply'][$y]['uname']?></a> <span><?php echo $messages1[$x]['reply'][$y]['time']?></span></p>
+					<p class="reply"><a href="#"><i> </i>回复</a> &nbsp;<a href="#"><i> </i>举报</a></p>
+					<div class="clearfix"> </div>
+				</div>
+				<div class="comments-top-top top-in">
+					<div class="men" >
+						<img   src="images/men.png" alt=""> 
+					</div>					
+						<p class="men-it"><?php echo $messages1[$x]['reply'][$y]['mcontent']?></p>
+					<div class="clearfix"> </div>
+				</div>
+			</div>
+			<?php }?>
+			
+			<?php }?>
+			
+
+		</div>
+		<div class="leave">
+			<h3>我要留言</h3>
+				<form action="MessageAdd.php" method="post">
+					<div class="single-grid">
+						<div class="single-us">
+							<textarea  name="mcontent"value=" " onfocus="this.value='';" onblur="if (this.value == '') {this.value = '在此输入留言';}">在此输入留言</textarea>
+							<input type="text"  hidden="hidden" value="<?php echo $pet['pid'];?>" name="pid" >
+							<input type="submit" value="发送" >
+						</div>
+				</form>
+				</div>
+			</div>			
+		</div>
+		</div>
+</div>
+<!---- footer --->
+			<div class="footer text-center">
+				<div class="container">
+					<div class="footer-grids">
+						<div class="col-md-6 footer-text">  
+							<h3>关于我们</h3>
+							<p>本网站用于流浪猫的领养，您可以通过观看直播，或者直接在“猫咪总览”页面寻找心仪的小猫</p>
+							<p>希望您能在收养后悉心照顾，并进行打卡，方便我们对猫咪现状的了解，有任何问题请联系我们</p>
+						</div>
+						<div class="col-md-6 footer-info">
+							<h3>联系我们</h3>
+							<p>Tel：123456789</p>
+							<div class="support">
+							   <input type="text" class="text" value="Enter email..." onFocus="this.value = '';" onBlur="if (this.value == 'Enter email...') {this.value = '发送邮件';}">
+							   <input type="submit" value="发送邮件" class="botton">
+							</div>
+					</div>
+					<div class="clearfix"> </div>
+				</div>
+			</div>
+		</div>
+			<div class="copy">
+		            </div>
+			<!--start-smoth-scrolling-->
+			<script type="text/javascript">
+								jQuery(document).ready(function($) {
+									$(".scroll").click(function(event){		
+										event.preventDefault();
+										$('html,body').animate({scrollTop:$(this.hash).offset().top},1000);
+									});
+								});
+								</script>
+							<!--start-smoth-scrolling-->
+						<script type="text/javascript">
+									$(document).ready(function() {
+										/*
+										var defaults = {
+								  			containerID: 'toTop', // fading element id
+											containerHoverID: 'toTopHover', // fading element hover id
+											scrollSpeed: 1200,
+											easingType: 'linear' 
+								 		};
+										*/
+										
+										$().UItoTop({ easingType: 'easeOutQuart' });
+										
+									});
+								</script>
+		<a href="#home" id="toTop" class="scroll" style="display: block;"> <span id="toTopHover" style="opacity: 1;"> </span></a>
+
+</body>
+</html>
